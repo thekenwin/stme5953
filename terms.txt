@@ -1,0 +1,119 @@
+Amplicon (Amplification)
+Piece of DNA or RNA that is the product of natural or artificial
+amplification or replication events, especially during PCR
+
+BLAST (Basic Local Alignment Search Tool)
+Computational biology and bioinformatics algorithm for comparing an input
+sequence against a database to find regions of local similarity
+
+Capillary gel electrophoresis
+Method used to separate DNA fragments by size using an electric
+field in a thin capillary tube filled with gel-like polymer
+
+Celera Genomics (Craig Venter)
+Private company co-founded by scientist Craig Venter that played a key role
+in sequencing the human genome alongside the public Human Genome Project
+
+Chromosome
+DNA molecule with part or all of the
+genetic material of an organism
+
+Clustal Omega
+Tool for performing multiple sequence alignments
+of nucleic acid or protein sequences
+
+CODIS (Combined DNA Index System)
+Software platform used by the FBI to support criminal justice DNA databases,
+helping match DNA profiles from crime scenes with known individuals
+
+Conserved
+Describes DNA, RNA, or protein sequences that have remained relatively unchanged
+throughout evolution, indicating they have important biological functions
+
+Distance matrix
+Table that shows the evolutionary distance between
+pairs of sequences based on their differences
+
+DNA (Deoxyribonucleic acid)
+Molecule that carries genetic instructions used in the growth, development,
+functioning, and reproduction of all known living organisms
+
+FASTA
+Text-based format for representing nucleotide or protein sequences,
+as well as the name of a sequence alignment tool
+
+Genome
+Complete set of DNA (including all
+of its genes) in an organism
+
+ggtree
+R package that extends 'ggplot2' to visualize and annotate
+phylogenetic trees using the grammar of graphics
+
+Guide tree
+Tree diagram that shows the relationship between sequences and
+is used to guide multiple sequence alignment processes
+
+Human Genome Project
+International research initiative (1990–2003) that successfully
+mapped and sequenced the entire human genome
+
+Human reference genome
+Digital DNA sequence assembled to represent the typical human
+genome, used as a standard for comparing individual genomes
+
+Locus (loci)
+Specific, fixed position on a chromosome where a
+particular gene or genetic marker is located
+
+LDIS (Local DNA Index System)
+DDNA database used at the local (usually city
+or county) level in the CODIS system
+
+Lymphocyte
+Type of white blood cell that is part of the immune system,
+including B-cells, T-cells, and natural killer cells
+
+Multiple sequence alignment
+Alignment of three or more biological sequences to identify regions of similarity
+that may indicate functional, structural, or evolutionary relationships
+
+NDIS (National DNA Index System)
+National-level database within CODIS, managed by the FBI, that
+allows for comparison of DNA profiles from across the country
+
+NJplot
+Software tool used to visualize phylogenetic trees, especially
+those built using the Neighbor-Joining method
+
+Pairwise alignment score
+Numerical score representing the similarity
+between two sequences after aligning them
+
+PCR (Polymerase Chain Reaction)
+Technique invented by Kary Mullis used to amplify small segments
+of DNA, producing millions of copies in a short time
+
+Phylogenetic tree
+Diagram that shows evolutionary relationships among various biological species or sequences
+based on similarities and differences in their genetic or physical characteristics
+
+Phytohemagglutinin
+Plant-derived compound used in laboratories to stimulate
+cell division, particularly in lymphocytes
+
+Primer
+Short single-stranded DNA or RNA molecule that serves
+as a starting point for DNA synthesis during PCR
+
+SDIS (State DNA Index System)
+State-level DNA database in CODIS, which collects and
+stores DNA profiles from local jurisdictions
+
+Sequence
+Precise order of nucleotides in a DNA or RNA
+molecule or of amino acids in a protein
+
+STR (Short Tandem Repeat)
+Repeating sequences of 2-6 base pairs of
+DNA and are used in DNA profiling
