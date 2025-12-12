@@ -1,0 +1,13 @@
+awk -F '\t' '
+NR==1 {
+  for (i = 1; i <= NF; i++) {
+    if ($i == "ID") id = i
+    else if ($i == "Gene Symbol" || $i == "Gene symbol") sym = i
+    else if ($i == "Gene Title" || $i == "Gene title") title = i
+  }
+  next
+}
+NR > 1 {
+  print $id "\t" $sym "\t" $title
+}
+' GPL570.table.tsv > GPL570.id_symbol_title.tsv
