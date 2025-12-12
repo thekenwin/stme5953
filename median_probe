@@ -1,0 +1,25 @@
+awk -F '\t' '
+NR==1 { next }   # skip header
+{
+  gene = $1
+  n = 0
+  for (i = 4; i <= NF; i++) {
+    a[n++] = $i + 0
+  }
+
+  # insertion sort (asc)
+  for (i = 1; i < n; i++) {
+    v = a[i]
+    j = i - 1
+    while (j >= 0 && a[j] > v) {
+      a[j+1] = a[j]
+      j--
+    }
+    a[j+1] = v
+  }
+
+  m = int(n/2)
+  median = a[m]
+  print gene "\t" median
+}
+' GSE46602.drug_exp.tsv > median_probe.tsv
