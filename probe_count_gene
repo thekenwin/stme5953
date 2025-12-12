@@ -1,0 +1,11 @@
+awk -F '\t' '
+{
+  gene = $2
+  if (gene != "") counts[gene]++
+}
+END {
+  for (g in counts) print g "\t" counts[g]
+}
+' GPL570.drug.tsv \
+  | sort -k2,2nr > probe_count_gene.tsv
+# | sort -k1,1 > probe_count_gene.tsv
