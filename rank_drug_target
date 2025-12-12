@@ -1,0 +1,8 @@
+{
+  echo -e "GeneSymbol\tProbeCount\tMedianExpr\tScore\tGeneTitle"
+  awk -F '\t' '{
+    score = $2 * $3
+    print $1 "\t" $2 "\t" $3 "\t" score "\t" $4
+  }' combine_gene_table.tsv \
+  | sort -k4,4nr
+} > rank_drug_target.tsv
