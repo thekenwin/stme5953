@@ -1,0 +1,11 @@
+awk -F'\t' '
+NR==1 {
+  # DO NOT CHANGE HEADER
+  print "GeneSymbol\tProbeCount\tMedianExpr\tScore\tGeneTitle"
+  next
+}
+{
+  # Add an extra tab ONLY after the GeneSymbol column
+  printf "%s\t\t%d\t%.2f\t%.2f\t%s\n", $1, $2, $3, $4, $5
+}
+' rank_drug_target.tsv > rank_drug_target_clean.tsv
