@@ -1,0 +1,17 @@
+awk -F '\t' '
+  NR==FNR {
+    # First file: GPL570.drug.tsv
+    # Map probeID -> "GeneSymbol\tGeneTitle"
+    drug[$1] = $2 "\t" $3
+    next
+  }
+  FNR==1 {
+    # Expression header line
+    print "GeneSymbol\tGeneTitle\t" $0
+    next
+  }
+  $1 in drug {
+    print drug[$1] "\t" $0
+  }
+' GPL570.drug.tsv GSE46602.exp_block.tsv \
+  > GSE46602.drug_exp.tsv
