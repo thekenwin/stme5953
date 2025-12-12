@@ -1,0 +1,12 @@
+awk -F'\t' '
+{
+  g = $1
+  m = $2 + 0
+  if (!(g in max) || m > max[g]) {
+    max[g] = m
+  }
+}
+END {
+  for (g in max) print g "\t" max[g]
+}
+' median_probe.tsv | sort -k1,1 > median_gene.tsv
