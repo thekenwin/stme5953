@@ -110,6 +110,10 @@ SDIS (State DNA Index System)
 State-level DNA database in CODIS, which collects and
 stores DNA profiles from local jurisdictions
 
+SeaView
+Software tool used to view and edit sequence alignments 
+and construct and visualize phylogenetic trees
+
 Sequence
 Precise order of nucleotides in a DNA or RNA
 molecule or of amino acids in a protein
