@@ -98,7 +98,7 @@ Phylogenetic tree
 Diagram that shows evolutionary relationships among various biological species or sequences
 based on similarities and differences in their genetic or physical characteristics
 
-Phytohemagglutinin
+PHA (Phytohemagglutinin)
 Plant-derived compound used in laboratories to stimulate
 cell division, particularly in lymphocytes
 
