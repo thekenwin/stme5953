@@ -12,8 +12,22 @@
 
 set -euo pipefail
 
+DRY_RUN=false
+
+case "${1:-}" in
+    --dry-run)
+        DRY_RUN=true
+        ;;
+    "")
+        ;;
+    *)
+        echo "Usage: $0 [--dry-run]"
+        exit 1
+        ;;
+esac
+
 echo "========================================"
-echo "Miniconda Installation"
+echo "Miniconda installation"
 echo "========================================"
 
 # ------------------------------------------------------------
@@ -24,7 +38,14 @@ if command -v conda >/dev/null 2>&1; then
     echo "Conda is already installed."
     conda --version
     conda info --base
-    echo "Skipping Miniconda installation."
+
+    if [[ "$DRY_RUN" == true ]]; then
+        echo "[DRY RUN] Existing installation detected."
+        echo "[DRY RUN] No changes will be made."
+    else
+        echo "Skipping Miniconda installation."
+    fi
+
     exit 0
 fi
 
@@ -69,6 +90,15 @@ esac
 
 URL="https://repo.anaconda.com/miniconda/${INSTALLER}"
 
+if [[ "$DRY_RUN" == true ]]; then
+    echo
+    echo "[DRY RUN] Installer: ${INSTALLER}"
+    echo "[DRY RUN] Download URL: ${URL}"
+    echo "[DRY RUN] Installation directory: ${HOME}/miniconda3"
+    echo "[DRY RUN] No files will be downloaded or modified."
+    exit 0
+fi
+
 echo
 echo "Downloading: ${INSTALLER}"
 
@@ -87,15 +117,15 @@ fi
 
 INSTALL_DIR="${HOME}/miniconda3"
 
-echo
-echo "Installing Miniconda into:"
-echo "${INSTALL_DIR}"
-
 if [[ -e "${INSTALL_DIR}" ]]; then
-    echo "ERROR: Installation directory already exists."
+    echo "ERROR: Installation directory already exists: ${INSTALL_DIR}"
     echo "No files have been overwritten."
     exit 1
 fi
+
+echo
+echo "Installing Miniconda into:"
+echo "${INSTALL_DIR}"
 
 bash "${INSTALLER}" -b -p "${INSTALL_DIR}"
 
